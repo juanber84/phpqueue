@@ -87,7 +87,7 @@ class Publisher
 				msg_send($this->queue,$this->msgtype_send, $value, $this->serialize_needed, $this->block_send, $err);
 			}
 		} else{
-			msg_send($queue,$this->msgtype_send, $this->message, $this->serialize_needed, $this->block_send, $err);
+			msg_send($this->queue,$this->msgtype_send, $this->message, $this->serialize_needed, $this->block_send, $err);
 		}
     }  
 
