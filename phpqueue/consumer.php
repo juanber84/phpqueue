@@ -43,7 +43,7 @@ class Consumer
 		$this->msgtype_receive  = $settings['msgtype_receive'];
 		$this->maxsize 			= $settings['maxsize'];
 		$this->option_receive  	= $settings['option_receive'];
-		$this->serialize_needed = $settings['serialize_needed';
+		$this->serialize_needed = $settings['serialize_needed'];
 
 	}
 
