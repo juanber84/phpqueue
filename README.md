@@ -16,7 +16,9 @@ Install via [Composer](http://getcomposer.org)
 
 Composer generates a vendor/autoload.php file. You can simply include this file and you will get autoloading for free.
 
-	require 'vendor/autoload.php';
+```php
+require 'vendor/autoload.php';
+```
 
 ## Example of Publisher
 
