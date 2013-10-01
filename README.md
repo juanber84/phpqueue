@@ -20,7 +20,7 @@ Composer generates a vendor/autoload.php file. You can simply include this file 
 
 ## Example of Publisher
 
-	<?php
+	```php
 	require 'vendor/autoload.php';
 
 	use phpqueue\Publisher;
@@ -33,11 +33,11 @@ Composer generates a vendor/autoload.php file. You can simply include this file 
 	$publisher->setQueue('123456');    	  	
 	$publisher->setMessage($messages);
 	$publisher->publish();
-
+	```
 
 ## Example of Consumer
 
-	<?php
+	```php
 	require 'vendor/autoload.php';
 
 	use phpqueue\Consumer;
@@ -48,3 +48,4 @@ Composer generates a vendor/autoload.php file. You can simply include this file 
 		echo $consumer->pickup(); 
 		// try it out
 	} while (true);   	
+	```
