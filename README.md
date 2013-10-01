@@ -17,3 +17,36 @@ Install via [Composer](http://getcomposer.org)
 Composer generates a vendor/autoload.php file. You can simply include this file and you will get autoloading for free.
 
 	require 'vendor/autoload.php';
+
+## Example of Publisher
+
+	<?php
+
+	require 'vendor/autoload.php';
+
+	use phpqueue\Publisher;
+
+	for ($i=0; $i < 10000; $i++) { 
+		$messages[] = $i;
+	}
+
+	$publisher = new Publisher();
+	$publisher->setQueue('123456');    	  	
+	$publisher->setMessage($messages);
+	$publisher->publish();
+
+
+## Example of Consumer
+
+	<?php
+	
+	require 'vendor/autoload.php';
+
+	use phpqueue\Consumer;
+
+	$consumer = new Consumer();
+	$consumer->setQueue('123456'); 
+	do {
+		echo $consumer->pickup(); 
+		// try it out
+	} while (true);   	
