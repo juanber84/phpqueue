@@ -20,32 +20,34 @@ Composer generates a vendor/autoload.php file. You can simply include this file 
 
 ## Example of Publisher
 
-	```php
-	require 'vendor/autoload.php';
+```php
+<?php
+require 'vendor/autoload.php';
 
-	use phpqueue\Publisher;
+use phpqueue\Publisher;
 
-	for ($i=0; $i < 10000; $i++) { 
-		$messages[] = $i;
-	}
+for ($i=0; $i < 10000; $i++) { 
+	$messages[] = $i;
+}
 
-	$publisher = new Publisher();
-	$publisher->setQueue('123456');    	  	
-	$publisher->setMessage($messages);
-	$publisher->publish();
-	```
+$publisher = new Publisher();
+$publisher->setQueue('123456');    	  	
+$publisher->setMessage($messages);
+$publisher->publish();
+```
 
 ## Example of Consumer
 
-	```php
-	require 'vendor/autoload.php';
+```php
+<?php
+require 'vendor/autoload.php';
 
-	use phpqueue\Consumer;
+use phpqueue\Consumer;
 
-	$consumer = new Consumer();
-	$consumer->setQueue('123456'); 
-	do {
-		echo $consumer->pickup(); 
-		// try it out
-	} while (true);   	
-	```
+$consumer = new Consumer();
+$consumer->setQueue('123456'); 
+do {
+	echo $consumer->pickup(); 
+	// try it out
+} while (true);   	
+```
