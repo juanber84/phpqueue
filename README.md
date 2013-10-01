@@ -21,7 +21,6 @@ Composer generates a vendor/autoload.php file. You can simply include this file 
 ## Example of Publisher
 
 	<?php
-
 	require 'vendor/autoload.php';
 
 	use phpqueue\Publisher;
@@ -39,7 +38,6 @@ Composer generates a vendor/autoload.php file. You can simply include this file 
 ## Example of Consumer
 
 	<?php
-	
 	require 'vendor/autoload.php';
 
 	use phpqueue\Consumer;
