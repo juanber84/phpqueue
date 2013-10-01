@@ -18,6 +18,7 @@ class Publisher
 	private $serialize_needed;	
 	private $block_send;
 	private $msgtype_send;	
+	private $queue;	
 
 	/*
 	 * @package phpqueue
@@ -76,11 +77,14 @@ class Publisher
         $this->msgtype_send = $msgtype_send;   
     }
 
+    public function setQueue($key){
+        $this->queue = msg_get_queue($key);   
+    }
+
     public function publish(){
-		$queue = msg_get_queue($this->msgkey); 
 		if (is_array($this->message)) {
 			foreach ($this->message as $value) {
-				msg_send($queue,$this->msgtype_send, $value, $this->serialize_needed, $this->block_send, $err);
+				msg_send($this->queue,$this->msgtype_send, $value, $this->serialize_needed, $this->block_send, $err);
 			}
 		} else{
 			msg_send($queue,$this->msgtype_send, $this->message, $this->serialize_needed, $this->block_send, $err);
