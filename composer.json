@@ -2,7 +2,7 @@
     "name": "juanber84/phpqueue",
     "type": "library",
     "description": "Queue system in php",
-    "keywords": [ "queue, php" ],
+    "keywords": [ "queue", "php" ],
     "homepage": "https://github.com/juanber84/phpqueue",
     "license": "MIT",
     "authors": [{
