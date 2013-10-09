@@ -1,15 +1,9 @@
-<?php
-	/*
-	$MSGKey = "123456" ; 	
-	$queue = msg_get_queue($MSGKey) ; 
-	do{
-		$intail = msg_stat_queue($queue)['msg_qnum'];
-		if ($intail != 0) {
-			echo "mensajes en la cola ".msg_stat_queue($queue)['msg_qnum'];
-			echo "\n";
-		}
-	}while(true);
-	*/
+<?php 
+	session_start();
+	if (!isset($_SESSION['user'])) : 
+		header("Location: login.php");
+	endif; 
+
 	$file = dirname(__FILE__)."/../src/config.json";
 	$json = json_decode(file_get_contents($file));
 
