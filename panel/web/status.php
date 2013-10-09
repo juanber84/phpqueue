@@ -23,7 +23,8 @@
 		<td>
 			<?php  
 				if (msg_queue_exists($queue)) :
-					echo msg_stat_queue($queue)['msg_qnum'];
+					$openqueue = msg_get_queue($queue) ; 
+					echo msg_stat_queue($openqueue)['msg_qnum'];
 				else :
 					echo "---";
 				endif;

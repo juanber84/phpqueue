@@ -16,12 +16,12 @@
 			<thead>
 				<th>Queure</th>
 				<th>Status</th>
-				<th>Messages in</th>				
+				<th>Messages</th>				
 			</thead>
 			<tbody id="tbody"></tbody>			
 		</table>
 		<script type="text/javascript">
-			$('#tbody').load('status.php')
+			setInterval(function(){$('#tbody').load('status.php')},500);			
 		</script>
 	</body>
 </html>
