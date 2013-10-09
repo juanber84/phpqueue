@@ -8,8 +8,20 @@
 <html>
 	<head>
 		<title>phpqueueDASHBOARD</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	</head>
 	<body>
-	<h1>phpqueue</h1>
+		<h1>phpqueue</h1>
+		<table>
+			<thead>
+				<th>Queure</th>
+				<th>Status</th>
+				<th>Messages in</th>				
+			</thead>
+			<tbody id="tbody"></tbody>			
+		</table>
+		<script type="text/javascript">
+			$('#tbody').load('status.php')
+		</script>
 	</body>
 </html>
