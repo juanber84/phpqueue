@@ -17,8 +17,24 @@
 ?>
 	<tr>
 		<td><?= $queue ?></td>
-		<td><?= $queue ?></td>
-		<td><?= $queue ?></td>
+		<td>
+			<?php  
+				if (msg_queue_exists($queue)) :
+					echo "ON";
+				else :
+					echo "OFF";
+				endif;
+			?>
+		</td>
+		<td>
+			<?php  
+				if (msg_queue_exists($queue)) :
+					echo msg_stat_queue($queue)['msg_qnum'];
+				else :
+					echo "---";
+				endif;
+			?>			
+		</td>
 	</tr>
 <?php
 	endforeach;
