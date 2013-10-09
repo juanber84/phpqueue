@@ -6,7 +6,15 @@
 		if ($_POST['user'] == $json->secure->user && $_POST['pass'] == $json->secure->pass) {
 			session_start();
 			$_SESSION['user'] = $json->secure->user;
+			header("Location: /index.php");
+
+			echo "string"; exit;
 		}
 	}
+ ?>
 
-//exec('php -S localhost:8000 -t /Users/juanber/Desktop/WORKSPACE/phpqueue/panel/')
+	<form action="" method="post">
+		<label>User</label><input name="user" type="text"><br>
+		<label>Password</label><input name="pass" type="passsword"><br>
+		<input type="submit">
+	</form>

@@ -1,15 +1,14 @@
-<?php require(dirname(__FILE__)."/../src/phpqueupanel.php") ?>
+<?php 
+	if (!isset($_SESSION['user'])) : 
+		header("Location: /login.php");
+	endif; 
+?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-<?php if (isset($_SESSION['s_username'])) : ?>
-	<h1>phpqueue</h1>
-<?php else : ?>
-	<?php require(dirname(__FILE__)."/../src/login.php") ?>
-<?php endif; ?>
+	<head>
+		<title>hpqueueDASHBOARD</title>
+	</head>
+	<body>
 
-</body>
+	</body>
 </html>

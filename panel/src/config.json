@@ -1,6 +1,11 @@
 {
-	"ip": "localhost",
-	"port": "localhost",
-	"user": "juan",
-	"pass": "berzal"
+    "secure": {
+        "user": "user",
+        "pass": "pass"
+    },	
+    "queeue": [
+        123456,
+        124567,
+        123458
+    ]
 }
