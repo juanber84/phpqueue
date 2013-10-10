@@ -55,4 +55,4 @@ do {
 ```
 # New feature (Panel)
 
-For use it you must put a virtual host in /phpqueue/panel/web
+You must put a virtual host in /panel/web
