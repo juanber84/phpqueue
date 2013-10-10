@@ -53,3 +53,6 @@ do {
 	// try it out
 } while (true);   	
 ```
+# New feature (Panel)
+
+For use it you must put a virtual host in /phpqueue/panel/web
