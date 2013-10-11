@@ -29,7 +29,8 @@ class Publisher
 		$settings = array(
 			'msgkey' 			=> md5(uniqid(microtime(), true)),
 			'serialize_needed'	=> false,
-			'block_send' 		=> false,         
+			//'block_send' 		=> false, // unblock
+			'block_send' 		=> true,  // block         
 			'msgtype_send'		=> 1
 		);
 
