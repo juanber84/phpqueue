@@ -55,4 +55,7 @@ do {
 ```
 # New feature (Panel)
 
+## How configure
+
+Put user, pass and your queue's key in config.json
 You must put a virtual host in /panel/web
