@@ -28,15 +28,19 @@ require 'vendor/autoload.php';
 
 use phpqueue\Publisher;
 
-for ($i=0; $i < 10000; $i++) { 
-	$messages[] = $i;
-}
+$data = array(
+	'name' 		=> 'juan',
+	'surname' 	=> 'berzal',
+	'email' 	=> 'juanber84@gmail.com'
+);
+
+$messages =json_encode($data);
 
 $publisher = new Publisher();
-$publisher->setQueue('123456');    	  	
+$publisher->setQueue('123458');         
 $publisher->setMessage($messages);
-// $publisher->setBlock_send(true);   // synchronous send
-// $publisher->setBlock_send(false);  // asynchronous send
+$publisher->setBlock_send(true);   // synchronous send
+//$publisher->setBlock_send(false);  // asynchronous send
 $publisher->publish();
 ```
 
