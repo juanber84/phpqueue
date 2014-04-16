@@ -41,7 +41,7 @@ $publisher->setQueue('123456');
 $publisher->setMessage($messages);
 $publisher->setBlock_send(true);   // synchronous send
 //$publisher->setBlock_send(false);  // asynchronous send
-$publisher->publish();
+$response = $publisher->publish(); // empty response or array of fails
 ```
 
 ## Example of Consumer
