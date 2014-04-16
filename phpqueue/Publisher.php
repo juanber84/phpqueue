@@ -83,13 +83,21 @@ class Publisher
     }
 
     public function publish(){
-		if (is_array($this->message)) {
-			foreach ($this->message as $value) {
-				msg_send($this->queue,$this->msgtype_send, $value, $this->serialize_needed, $this->block_send, $err);
-			}
-		} else{
-			msg_send($this->queue,$this->msgtype_send, $this->message, $this->serialize_needed, $this->block_send, $err);
-		}
+        $resend = array();
+        if (is_array($this->message)) {
+            foreach ($this->message as $value) {
+                if (!msg_send($this->queue,$this->msgtype_send, $value, $this->serialize_needed, $this->block_send, $err)) {
+                    $resend[] = $value;
+                }
+                
+            }
+        } else{
+            if (!msg_send($this->queue,$this->msgtype_send, $this->message, $this->serialize_needed, $this->block_send, $err)) {
+                $resend[] = $value;
+            }
+
+        }
+        return $resend;
     }  
 
 }

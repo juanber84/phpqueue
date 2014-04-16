@@ -1,4 +1,4 @@
-phpqueue -- UNDER CONSTRUCTION
+phpqueue
 ==============================
 Queue system in php
 
@@ -37,7 +37,7 @@ $data = array(
 $messages =json_encode($data);
 
 $publisher = new Publisher();
-$publisher->setQueue('123458');         
+$publisher->setQueue('123456');         
 $publisher->setMessage($messages);
 $publisher->setBlock_send(true);   // synchronous send
 //$publisher->setBlock_send(false);  // asynchronous send
@@ -59,9 +59,3 @@ do {
 	// try it out
 } while (true);   	
 ```
-# New feature (Panel)
-
-## How configure
-
-Put user, pass and your queue's key in config.json
-You must put a virtual host in /panel/web
