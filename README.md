@@ -59,3 +59,15 @@ do {
 	// try it out
 } while (true);   	
 ```
+## Example of Use
+
+- Copy the example of publisher code in publisher.php
+- Copy the example of consumer code in consumer.php
+
+Start the consumer
+
+	$ php consumer.php
+
+Throw the publiser
+
+	$ php publisher.php
