@@ -1,4 +1,4 @@
-phpqueue
+phpqueue 1.0
 ==============================
 Queue system in php
 
